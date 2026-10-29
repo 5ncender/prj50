@@ -1,0 +1,25 @@
+# 비밀값 — 절대 커밋 금지
+.env
+.env.*
+!.env.example
+secrets/
+*credentials*.json
+*token*.json
+
+# 실데이터 (서버에만 존재)
+data/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# OS / 에디터
+.DS_Store
+.idea/
+.vscode/

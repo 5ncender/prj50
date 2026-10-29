@@ -1,0 +1,24 @@
+# 노트북 개발용 Postgres. 운영 DB는 서버에 따로 둔다.
+# 포트 5433: 다른 프로젝트의 로컬 Postgres(5432)와 겹치지 않게.
+name: invest-dev
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: invest
+      POSTGRES_PASSWORD: invest
+      POSTGRES_DB: invest
+      TZ: Asia/Seoul
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U invest -d invest"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:

@@ -1,0 +1,18 @@
+# 수집 소스 레지스트리 — Phase 1부터 채운다.
+#
+# tier: A = 중앙은행·정부 1차 자료, 큐레이션 뉴스레터, 주요 외신
+#       B = 일반 경제지, 증권사 리서치
+#       C = 검색 기반 수집 (네이버/구글 뉴스) — 점수가 높을 때만 통과
+#
+# 예시:
+# news:
+#   - id: fed-press
+#     name: Federal Reserve press releases
+#     kind: rss
+#     url: https://www.federalreserve.gov/feeds/press_all.xml
+#     tier: A
+#     region: us
+#     lang: en
+
+news: []
+research: []
